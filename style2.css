@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: lato;
+}
+.centralize{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-cont{
+    height: 100vh;
+    background-color:  #F9E795;
+}
+.game-board{
+    height: 80vh;
+    width: 65vw;
+    display: flex;
+    position: relative;
+    box-shadow: 2px 8px 8px 2px rgba(120, 63, 63, 0.307);
+}
+.player-cont{
+    background-color:  rgb(238, 78, 52);
+    color: white;
+    padding: 5em 2em;
+    width: 50%;  /*or flex: 50% will mean the same thingbcoz its parent is a flex container*/
+    display: flex;
+    align-items: center; /*bcoz of the flex-direction*/
+    flex-direction: column;
+    transition: all 0.75s;
+    position: relative;
+}
+.player-name, .current-score{
+    font-size: 2.2em;
+    text-transform: uppercase;
+}
+.active-player{
+    background-color:rgb(74, 0, 0);
+    z-index: 1;
+} 
+.global-score{
+    font-size: 4em;
+    font-weight: lighter;
+    margin: 0.2em 0;
+}
+.current-cont{
+    background-color: white;
+    text-align: center; 
+    width: 50%;
+    height: 25%;
+    position: relative;
+    top: 35%;
+    padding: 1em;
+    border-radius: 9px;
+    box-shadow: 2px 8px 8px 2px rgba(120, 63, 63, 0.307);
+}
+.current-label, .current-score{
+    color: #EE4E34;
+    margin-bottom: 0.7em;
+}
+.current-label{
+    font-size: 1.3em;
+}
+.btn{
+    background-color: white;
+    width: 9em;
+    height: 40px;
+    font-family: inherit;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 2px 8px 8px 2px rgba(120, 63, 63, 0.307);
+    cursor: pointer;
+    transition: all 1s;
+    position: absolute; /*note: i used main-cont as the positon: relative so that i can set all my btn 
+    as position: absolute so that i can position all my buttons and d dice */
+    z-index: 1;
+}
+.dice{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    z-index: 1;
+    top: 23%;
+    left: 45%;
+}
+.btn-newgame{
+    top: 8%;
+    left: 40%;
+}
+.btn-roll{
+    top: 63%;
+    left: 40%;
+}
+.btn-hold{
+    top: 73%;
+    left: 40%;
+}
+.btn:active{
+    transform: translate(0px, 30px); /*x-axis , y-axis*/
+}
+.winner{
+    font-weight: 900;
+    color: #F9E795;
+}
+.report-div{
+    position: absolute;
+    background-color: orange;
+    padding: 0.4rem;
+    display: none;
+    color: white;
+    top: 33%;
+    left: 45%;
+    z-index: 1;
+}
